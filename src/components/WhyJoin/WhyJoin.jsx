@@ -5,7 +5,7 @@ import Button from "../core/Button";
 export default function WhyJoin() {
   return (
     <section className="px-4 py-6 mx-auto max-w-screen-xl">
-      <div className="grid items-center grid-cols-1 gap-14 md:grid-cols-5">
+      <div className="grid items-center grid-cols-1 gap-7 md:gap-14 md:grid-cols-5">
         <div className="relative col-span-1 md:col-span-2">
           <div className="relative w-full mx-auto max-w-[440px] aspect-square">
             <div className="absolute -bottom-3 -right-3  h-[98%] w-[98%] rounded-[20px] bg-[#0066FF] " />

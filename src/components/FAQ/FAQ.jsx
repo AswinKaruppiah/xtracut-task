@@ -45,7 +45,7 @@ export default function FAQ() {
   return (
     <section className="mx-auto max-w-screen-lg px-4 md:pt-12 flex justify-center items-center flex-col gap-4 md:gap-16">
       <h2 className="font-marcellus text-center">Frequently Asked Questions</h2>
-      <ul className="flex flex-col gap-4 w-full">
+      <ul className="flex flex-col gap-2 md:gap-4 w-full">
         {faq.map((item) => {
           const isOpen = openId === item.id;
           return (
