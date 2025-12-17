@@ -42,7 +42,7 @@ const slideData = [
 export default function OurFacility() {
   const containerRef = useRef(null);
   const cardRefs = useRef({});
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const CARD_WIDTH = 313;
   const GAP = 16;
@@ -53,11 +53,11 @@ export default function OurFacility() {
     setContainerWidth(containerRef.current.parentElement.offsetWidth);
 
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev === slideData.length ? 1 : prev + 1));
-    }, 3000); // smoother than 1s
+      setActiveIndex((prev) => (prev === slideData.length - 1 ? 0 : prev + 1));
+    }, 3000);
 
-    return () => clearInterval(interval); // ✅ cleanup
-  }, [slideData.length]);
+    return () => clearInterval(interval);
+  }, []);
 
   const CARD_FULL_WIDTH = CARD_WIDTH + GAP;
   const totalWidth = slideData.length * CARD_FULL_WIDTH - GAP;
@@ -72,11 +72,11 @@ export default function OurFacility() {
     : 0;
 
   const moveRight = () => {
-    setActiveIndex((prev) => (prev === slideData.length ? 1 : prev + 1));
+    setActiveIndex((prev) => (prev === slideData.length - 1 ? 0 : prev + 1));
   };
 
   const moveLeft = () => {
-    setActiveIndex((prev) => (prev === 1 ? slideData.length : prev - 1));
+    setActiveIndex((prev) => (prev === 0 ? slideData.length - 1 : prev - 1));
   };
 
   return (
@@ -123,7 +123,7 @@ export default function OurFacility() {
                   alt={item.title}
                   fill
                   className={`object-cover transition-transform duration-500
-            ${activeIndex === item.id ? "scale-105" : "scale-100"}`}
+            ${activeIndex === index ? "scale-105" : "scale-100"}`}
                 />
 
                 {/* Title + lines */}
@@ -132,9 +132,7 @@ export default function OurFacility() {
                     <div
                       className={`h-[1px] w-full bg-primary-background transition-transform duration-500
                 ${
-                  activeIndex === item.id
-                    ? "translate-x-0"
-                    : "-translate-x-full"
+                  activeIndex === index ? "translate-x-0" : "-translate-x-full"
                 }`}
                     />
                   </div>
@@ -147,7 +145,7 @@ export default function OurFacility() {
                     <div
                       className={`h-[1px] w-full bg-primary-background transition-transform duration-500
                 ${
-                  activeIndex === item.id ? "translate-x-0" : "translate-x-full"
+                  activeIndex === index ? "translate-x-0" : "translate-x-full"
                 }`}
                     />
                   </div>
