@@ -11,7 +11,7 @@ export default function Footer() {
         alt="footer-banner"
         objectFit="cover"
       />
-      <div className="mx-auto relative z-10 max-w-screen-xl py-12 grid gap-8 md:grid-cols-12">
+      <div className="mx-auto relative z-10 max-w-screen-xl py-7 md:py-12 grid gap-8 md:grid-cols-12">
         <div className="text-white w-full col-span-3">
           <div className="relative max-w-[202px]">
             <Image
@@ -25,7 +25,7 @@ export default function Footer() {
 
             <h3
               className="absolute inset-0 flex items-center justify-center
-                 text-5xl font-marcellus text-black mb-5"
+                text-3xl md:text-5xl font-marcellus text-black mb-5"
             >
               Logo
             </h3>
@@ -36,7 +36,9 @@ export default function Footer() {
             eiusmod tempor incididunt ut
           </p>
 
-          <h5 className="mb-3 text-xl mt-6 font-marcellus">Follow us</h5>
+          <h5 className="mb-3 text-lg md:text-xl mt-6 font-marcellus">
+            Follow us
+          </h5>
           <div className="flex gap-8">
             <Link href="#">
               <Image
@@ -86,7 +88,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-white col-span-2">
-          <h4 className="mb-4 text-3xl font-marcellus">Quick Link</h4>
+          <h4 className="mb-4 text-2xl md:text-3xl font-marcellus">
+            Quick Link
+          </h4>
           <ul className="space-y-2">
             <li>
               <Link href="#" className="text-sm hover:text-accent">
@@ -116,7 +120,9 @@ export default function Footer() {
           </ul>
         </div>
         <div className="text-white col-span-3">
-          <h4 className="mb-4 text-3xl font-marcellus">Academics</h4>
+          <h4 className="mb-4 text-2xl md:text-3xl font-marcellus">
+            Academics
+          </h4>
           <ul className="space-y-2">
             <li>
               <Link href="#" className="text-sm hover:text-accent">
@@ -146,7 +152,9 @@ export default function Footer() {
           </ul>
         </div>
         <div className="text-white col-span-4">
-          <h4 className="mb-4 text-3xl font-marcellus">Contact us</h4>
+          <h4 className="mb-4 text-2xl md:text-3xl font-marcellus">
+            Contact us
+          </h4>
           <ul className="space-y-2">
             <li className="flex items-start gap-3">
               <Image
@@ -185,8 +193,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-screen-lg bg-white mx-auto px-6 py-3 z-10 relative footer-bar">
-        <p className="text-center text-sm">
+      <div className="max-w-screen-lg bg-white mx-auto px-6 py-2 md:py-3 z-10 relative footer-bar">
+        <p className="text-center text-xs md:text-sm">
           College © 2025 - All Right Reserved | Designed & Developed by Xtracut
         </p>
       </div>

@@ -91,13 +91,16 @@ export default function ContactUs() {
 
   return (
     <section className="contact-us-section px-4 mx-auto max-w-screen-xl">
-      <div className="bg-gradient-to-l from-[#0066A9] to-[#003C65] px-6 w-full pt-20 pb-12 rounded-[20px]">
-        <h2 className="mb-16 font-marcellus text-white text-center">
+      <div className="bg-gradient-to-l from-[#0066A9] to-[#003C65] px-6 w-full pt-10 md:pt-20 pb-6 md:pb-12 rounded-[20px]">
+        <h2 className="mb-4 md:mb-16 font-marcellus text-white text-center">
           {"Let's Work Together To Shape A Brighter Future!"}
         </h2>
 
-        <form onSubmit={handleSubmit} className="mx-auto max-w-5xl space-y-7">
-          <div className="grid gap-6 md:grid-cols-2">
+        <form
+          onSubmit={handleSubmit}
+          className="mx-auto max-w-5xl space-y-4 md:space-y-6"
+        >
+          <div className="grid gap-4 md:gap-6 md:grid-cols-2">
             <div>
               <input
                 id="firstName"
@@ -110,7 +113,9 @@ export default function ContactUs() {
                 }`}
               />
               {errors.firstName && (
-                <p className="mt-1 text-sm text-red-400">{errors.firstName}</p>
+                <p className="mt-1 text-xs md:text-sm text-red-400">
+                  {errors.firstName}
+                </p>
               )}
             </div>
             <div>
@@ -125,7 +130,9 @@ export default function ContactUs() {
                 }`}
               />
               {errors.email && (
-                <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                <p className="mt-1 text-xs md:text-sm text-red-500">
+                  {errors.email}
+                </p>
               )}
             </div>
           </div>
@@ -143,12 +150,14 @@ export default function ContactUs() {
                 }`}
               />
               {errors.message && (
-                <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                <p className="mt-1 text-xs md:text-sm text-red-500">
+                  {errors.message}
+                </p>
               )}
             </div>
           </div>
 
-          <div className="flex justify-center pt-7">
+          <div className="flex justify-center pt-4 md:pt-7">
             <button
               type="submit"
               disabled={!isFormValid}

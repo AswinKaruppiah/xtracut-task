@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="space-y-24">
+      <div className="space-y-12 md:space-y-24">
         <Hero />
         <WhyJoin />
         <ShapeFuture />

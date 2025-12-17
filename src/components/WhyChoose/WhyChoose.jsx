@@ -36,18 +36,18 @@ export default function WhyChoose() {
   return (
     <section className="px-4 py-6 mx-auto max-w-screen-xl">
       <div className="flex flex-col w-full items-center justify-center">
-        <div className="bg-[#F5F5F5] mb-8 rounded-full py-2 px-5 flex items-center gap-2 justify-center border-[#DBDBDB]">
-          <div className=" aspect-square h-2 rounded-full bg-primary-background"></div>
-          <h6>Why Choose </h6>
+        <div className="bg-[#F5F5F5] mb-4 md:mb-8 rounded-full py-2 px-5 flex items-center gap-2 justify-center border-[#DBDBDB]">
+          <div className="aspect-square h-2 rounded-full bg-primary-background"></div>
+          <h6>Why Choose</h6>
         </div>
 
-        <h2 className="font-marcellus mb-16">
+        <h2 className="font-marcellus mb-4 md:mb-16 text-center">
           Shape The Future Of Healthcare Education
         </h2>
 
         <div className="w-full max-w-screen-xl">
           <div className="grid grid-cols-1 md:grid-cols-8 gap-4 items-center">
-            <div className="flex flex-col gap-6 col-span-4 lg:col-span-3">
+            <div className="flex flex-col gap-3 md:gap-6 col-span-4 lg:col-span-3">
               {cardData.slice(0, 2).map((item) => (
                 <InfoCard
                   key={item.id}
@@ -75,7 +75,7 @@ export default function WhyChoose() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-6 col-span-4 lg:col-span-3">
+            <div className="flex flex-col gap-3 md:gap-6 col-span-4 lg:col-span-3">
               {cardData.slice(2, 4).map((item) => (
                 <InfoCard
                   key={item.id}

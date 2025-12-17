@@ -140,7 +140,7 @@ export default function AboutUs() {
                     isOpen
                       ? "bg-secondary-background text-white"
                       : "bg-gray-50 text-black"
-                  } text-2xl py-2 px-7 rounded-3xl font-marcellus`}
+                  } text-lg md:text-2xl py-2 px-5 md:px-7 rounded-3xl font-marcellus`}
                   onClick={() => {
                     setTab(item.id);
                   }}
@@ -163,11 +163,13 @@ export default function AboutUs() {
           </button>
         </div>
         <div>
-          <h3 className="text-3xl font-marcellus">{tabList[tab - 1].title}</h3>
+          <h3 className="text-2xl md:text-3xl font-marcellus">
+            {tabList[tab - 1].title}
+          </h3>
           <div className="about-us-points-container h-[422px] overflow-y-auto">
             <ol className="list-decimal pl-6 mb-4 space-y-2 mt-5">
               {tabList[tab - 1]?.content.map((item, index) => (
-                <li key={index} className="text-[#515151]">
+                <li key={index} className="text-[#515151] text-sm md:text-base">
                   {item}
                 </li>
               ))}

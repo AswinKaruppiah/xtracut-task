@@ -82,18 +82,18 @@ export default function OurFacility() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-l overflow-hidden from-[#0066A9] to-[#003C65] px-4 pt-20 pb-24">
+    <section className="w-full bg-gradient-to-l overflow-hidden from-[#0066A9] to-[#003C65] px-4 pt-10 md:pt-20 pb-6 md:pb-24">
       <div className="mx-auto max-w-screen-xl flex flex-col w-full items-center">
-        <div className="bg-white mb-8 rounded-full py-2 px-5 flex items-center gap-2 justify-center border-[#DBDBDB]">
+        <div className="bg-white mb-4 md:mb-8 rounded-full py-2 px-5 flex items-center gap-2 justify-center border-[#DBDBDB]">
           <div className=" aspect-square h-2 rounded-full bg-[#3C9E53]"></div>
           <h6>Our Facility</h6>
         </div>
-        <h2 className="font-marcellus mb-10 text-white">
+        <h2 className="font-marcellus mb-4 text-center md:mb-10 text-white">
           Empowering Future Healthcare Professionals
         </h2>
         <div className="flex gap-2 w-full justify-end mb-4">
           <button
-            className="p-3 rounded-full text-black hover:text-white bg-white hover:bg-primary-background swiper-button-next-custom"
+            className="p-3 md:p-3 rounded-full text-black hover:text-white bg-white hover:bg-primary-background swiper-button-next-custom"
             onClick={moveLeft}
           >
             <RightArrow />

@@ -43,8 +43,8 @@ export default function FAQ() {
     setOpenId(openId === id ? null : id);
   };
   return (
-    <section className="mx-auto max-w-screen-lg px-4 pt-12  flex justify-center items-center flex-col gap-16">
-      <h2 className="font-marcellus">Frequently Asked Questions</h2>
+    <section className="mx-auto max-w-screen-lg px-4 md:pt-12 flex justify-center items-center flex-col gap-4 md:gap-16">
+      <h2 className="font-marcellus text-center">Frequently Asked Questions</h2>
       <ul className="flex flex-col gap-4 w-full">
         {faq.map((item) => {
           const isOpen = openId === item.id;
@@ -52,12 +52,12 @@ export default function FAQ() {
             <div key={item.id} className="">
               <button
                 onClick={() => toggle(item.id)}
-                className={`z-10 relative  transition-colors ${
+                className={`z-10 relative gap-3 transition-colors ${
                   isOpen ? "bg-secondary-background" : "bg-[#EDEDED]"
-                }  py-3 px-6 flex justify-between items-center rounded-xl w-full `}
+                }  py-3 px-5 md:px-6 flex justify-between items-center rounded-xl w-full `}
               >
                 <h4
-                  className={`text-lg ${
+                  className={`text-sm md:text-lg text-left ${
                     isOpen ? "text-white" : "text-text-secondary"
                   } `}
                 >
@@ -80,11 +80,11 @@ export default function FAQ() {
                 )}
               </button>
               <div
-                className={`overflow-hidden transition-all -translate-y-2 duration-300 mx-0.5 bg-[#EDEDED] rounded-b-[20px] px-6 ${
-                  isOpen ? "max-h-48 py-9" : "max-h-0 py-0"
+                className={`overflow-hidden transition-all -translate-y-2 duration-300 mx-0.5 bg-[#EDEDED] rounded-b-[20px] px-4 md:px-6 ${
+                  isOpen ? "max-h-48 py-7 md:py-9" : "max-h-0 py-0"
                 }`}
               >
-                <p className="text-sm text-text-secondary -translate-y-2">
+                <p className="text-xs sm:text-sm text-text-secondary -translate-y-2">
                   {item.content}
                 </p>
               </div>

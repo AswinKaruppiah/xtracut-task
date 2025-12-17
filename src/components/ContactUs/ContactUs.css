@@ -1,10 +1,7 @@
 .contact-us-section input,
 textarea {
-  width: 100%;
-  padding: 14px 20px;
+  @apply w-full px-5 py-2 md:py-3 outline-none bg-white;
   border-radius: 30px;
-  outline: none;
-  background-color: white;
 }
 
 .contact-us-section input::placeholder {
