@@ -59,8 +59,6 @@ export default function OurFacility() {
     return () => clearInterval(interval); // ✅ cleanup
   }, [slideData.length]);
 
-  console.log(activeIndex);
-
   const CARD_FULL_WIDTH = CARD_WIDTH + GAP;
   const totalWidth = slideData.length * CARD_FULL_WIDTH - GAP;
 
