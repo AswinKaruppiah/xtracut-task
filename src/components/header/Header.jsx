@@ -48,25 +48,21 @@ const Navbar = () => {
         </div>
 
         {open ? (
-          <button
-            onClick={handleMenu}
-            className="relative h-10 aspect-square block lg:hidden"
-          >
+          <button onClick={handleMenu} className="block lg:hidden">
             <Image
               src={"/icons/close.png"}
-              fill
+              height={40}
+              width={40}
               className="object-cover"
               alt={"icon"}
             />
           </button>
         ) : (
-          <button
-            onClick={handleMenu}
-            className="relative h-10 aspect-square block lg:hidden"
-          >
+          <button onClick={handleMenu} className="block lg:hidden">
             <Image
               src={"/icons/menu.png"}
-              fill
+              height={40}
+              width={40}
               className="object-cover"
               alt={"icon"}
             />
