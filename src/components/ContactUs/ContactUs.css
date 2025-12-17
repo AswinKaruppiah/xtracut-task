@@ -1,0 +1,12 @@
+.contact-us-section input,
+textarea {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  outline: none;
+  background-color: white;
+}
+
+.contact-us-section input::placeholder {
+  font-size: 12px;
+}

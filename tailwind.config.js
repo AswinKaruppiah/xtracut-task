@@ -10,6 +10,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "primary-background": "#FFEC22",
+        "secondary-background": "#0071BC",
+        "text-secondary": "#595959",
+      },
+      fontFamily: {
+        marcellus: ["var(--font-marcellus)"],
+        inter: ["var(--font-inter)"],
       },
     },
   },

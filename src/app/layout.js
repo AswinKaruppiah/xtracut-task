@@ -1,15 +1,19 @@
-import localFont from "next/font/local";
-import "./globals.css";
+import "/styles/globals.css";
+import { Marcellus, Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const marcellus = Marcellus({
+  subsets: ["latin"],
+  weight: "400",
+
+  variable: "--font-marcellus",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+export const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -20,9 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${marcellus.variable}`}>
         {children}
       </body>
     </html>

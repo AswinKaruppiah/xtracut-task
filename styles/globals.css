@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #ffffff;
+  font-family: var(--font-inter);
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+/* hide scrollbar but keep scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.footer-bar {
+  clip-path: polygon(
+    6% 0%,
+    /* top-left – more slope */ 94% 0%,
+    /* top-right – more slope */ 100% 100%,
+    /* bottom-right */ 0% 100% /* bottom-left */
+  );
+}
